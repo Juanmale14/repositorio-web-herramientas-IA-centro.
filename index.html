@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositorio IA | Herramientas Educativas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pastel-blue-bg: #e0f2fe; 
+            --accent-indigo: #4f46e5;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--pastel-blue-bg);
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 2.5rem;
+        }
+
+        .tool-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 2rem;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+
+        .tag-pill {
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .tag-pill.active {
+            background-color: var(--accent-indigo);
+            color: white;
+            box-shadow: 0 8px 15px rgba(79, 70, 229, 0.25);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade {
+            animation: fadeIn 0.7s ease-out forwards;
+        }
+
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
+    </style>
+<style type="text/css">
+.grande { font-size: 60px; }
+</style>
+<script>
+// Escribir aqui el código Javascript
+</script>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.mx-auto{margin-left:auto;margin-right:auto}.mb-14{margin-bottom:3.5rem}.mb-16{margin-bottom:4rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-auto{margin-top:auto}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-14{height:3.5rem}.h-2\.5{height:0.625rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-14{width:3.5rem}.w-32{width:8rem}.w-5{width:1.25rem}.w-full{width:100%}.max-w-7xl{max-width:80rem}.flex-grow{flex-grow:1}@keyframes spin{to{transform:rotate(360deg)}}.animate-spin{animation:spin 1s linear infinite}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.gap-10{gap:2.5rem}.gap-3{gap:0.75rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-4{border-width:4px}.border-t{border-top-width:1px}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255 / var(--tw-border-opacity, 1))}.border-indigo-100\/50{border-color:rgb(224 231 255 / 0.5)}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-t-indigo-600{--tw-border-opacity:1;border-top-color:rgb(79 70 229 / var(--tw-border-opacity, 1))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/50{background-color:rgb(255 255 255 / 0.5)}.p-2{padding:0.5rem}.p-8{padding:2rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.pb-20{padding-bottom:5rem}.pt-16{padding-top:4rem}.text-center{text-align:center}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-\[1\.15\]{line-height:1.15}.tracking-\[0\.25em\]{letter-spacing:0.25em}.tracking-\[0\.3em\]{letter-spacing:0.3em}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.text-indigo-500{--tw-text-opacity:1;color:rgb(99 102 241 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.opacity-80{opacity:0.8}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-indigo-100\/50{--tw-shadow-color:rgb(224 231 255 / 0.5);--tw-shadow:var(--tw-shadow-colored)}.shadow-indigo-200{--tw-shadow-color:#c7d2fe;--tw-shadow:var(--tw-shadow-colored)}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:translate-x-2{--tw-translate-x:0.5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:text-6xl{font-size:3.75rem;line-height:1}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}</style></head>
+<body class="min-h-screen flex flex-col">
+
+    <main class="flex-grow pt-16 pb-20 px-6 max-w-7xl mx-auto w-full">
+        
+        <!-- Título Principal Actualizado -->
+        <header class="text-center mb-14 animate-fade">
+            <h1 class="text-4xl sm:text-6xl font-extrabold mb-8 tracking-tight text-slate-900 leading-[1.15]">
+                Repositorio de herramientas digitales educativas creadas con IA
+            </h1>
+            <div class="w-32 h-2.5 bg-indigo-500 rounded-full mx-auto opacity-80"></div>
+        </header>
+
+        <!-- Filtro por Etiquetas -->
+        <section class="mb-16 animate-fade" style="animation-delay: 0.15s;">
+            <div class="glass-card p-8 flex flex-col items-center shadow-xl shadow-indigo-100/50">
+                <span class="text-[10px] font-black uppercase tracking-[0.3em] text-indigo-500 mb-6 italic">Explorar por categorías y materias</span>
+                <div id="tag-filter-container" class="flex flex-wrap justify-center gap-3">
+                    <button class="tag-pill active px-6 py-2.5 rounded-full bg-white text-slate-600 font-bold text-sm border border-slate-100 shadow-sm hover:bg-slate-50 transition-all" onclick="filterByTag('all', this)">
+                        Ver Todo
+                    </button>
+                    <!-- Etiquetas dinámicas -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Pantalla de Carga -->
+        <div id="loading" class="flex flex-col items-center py-20">
+            <div class="w-14 h-14 border-4 border-indigo-100 border-t-indigo-600 rounded-full animate-spin"></div>
+        </div>
+
+        <!-- Contenedor de Herramientas -->
+        <div id="content-wrapper" class="hidden">
+            <div id="grid-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Tarjetas inyectadas -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="mt-auto py-16 bg-white/50 backdrop-blur-xl border-t border-indigo-100/50">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-slate-400 font-semibold text-xs uppercase tracking-[0.25em] mb-4">Proyecto de Innovación Educativa</p>
+            <p class="text-slate-500 font-medium mb-4 italic">Elaborado por</p>
+            <a href="https://blogsaverroes.juntadeandalucia.es/ellocodelamochila/" target="_blank" class="inline-flex items-center gap-3 group">
+                <span class="text-3xl font-black text-slate-900 group-hover:text-indigo-600 transition-all duration-300 tracking-tighter">
+                    “El loco de la mochila”
+                </span>
+                <div class="bg-indigo-600 p-2 rounded-xl text-white group-hover:translate-x-2 transition-transform shadow-lg shadow-indigo-200">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. DATOS DE GESTIÓN DE CENTRO ---
+        const CENTRO_TOOLS = [
+            { cat: 'Centro', title: 'Gestión de Espacios Comunes', desc: 'Reserva y organización de espacios compartidos del centro.', img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600', tags: ['Espacios', 'Centro'], link: 'https://juanmale14.github.io/gesti-n-espacios-comunes-centro./' },
+            { cat: 'Centro', title: 'Gestión de Carritos', desc: 'Control de horarios para dispositivos portátiles y tablets.', img: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600', tags: ['TIC', 'Carritos', 'Centro'], link: 'https://juanmale14.github.io/gesti-n-de-carritos./' },
+            { cat: 'Centro', title: 'Generador de Horarios', desc: 'Creación de cuadrantes para auxiliares y personal de apoyo.', img: 'https://images.unsplash.com/photo-1506784919141-935049915272?w=600', tags: ['Horarios', 'Personal'], link: 'https://juanmale14.github.io/mi-app-horarios-auxiliares./' },
+            { cat: 'Centro', title: 'Carné de Convivencia', desc: 'Seguimiento digital de la convivencia escolar.', img: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600', tags: ['Convivencia', 'Centro'], link: 'https://juanmale14.github.io/gesti-n-convivencia/' },
+            { cat: 'Centro', title: 'FOTOCOPIATOR', desc: 'Gestión de impresiones y copistería para docentes.', img: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600', tags: ['Centro', 'Impresiones'], link: 'https://juanmale14.github.io/fotocopiador/' }
+        ];
+
+        // --- 2. DATOS DE GESTIÓN DE AULA ---
+        const AULA_TOOLS = [
+            { cat: 'Aula', title: 'Creación de equipos', desc: 'Herramienta para organizar grupos de trabajo rápidos.', img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600', tags: ['Gestión de aula', 'Aula', 'Equipo', 'Cooperativo'], link: 'https://juanmale14.github.io/creadora-equipos-aula./' },
+            { cat: 'Aula', title: 'Equipos Base Cooperativos', desc: 'Crea equipos heterogéneos para metodologías cooperativas.', img: 'https://images.unsplash.com/photo-1523240715632-d984bc310b1a?w=600', tags: ['Aula', 'Cooperativo', 'Gestión de aula'], link: 'https://juanmale14.github.io/generador-equipos-base./' },
+            { cat: 'Aula', title: 'Gestión de Rúbricas', desc: 'Diseño y aplicación de rúbricas de evaluación digital.', img: 'https://images.unsplash.com/photo-1454165833767-02a698a48769?w=600', tags: ['Evaluación', 'Aula'], link: 'https://juanmale14.github.io/gesti-n-de-r-bricas-en-clase./' },
+            { cat: 'Aula', title: 'Participación en Clase', desc: 'Incentiva la participación activa del alumnado.', img: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600', tags: ['Participación', 'Convivencia', 'Aula'], link: 'https://juanmale14.github.io/participaci-n-en-clase/' },
+            { cat: 'Aula', title: 'Ruleta de Grupos', desc: 'Selección aleatoria de grupos para exposiciones.', img: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600', tags: ['Aula', 'Equipo', 'Cooperativo'], link: 'https://juanmale14.github.io/ruleta-selecci-n-de-grupos./' }
+        ];
+
+        // --- 3. DATOS DE APLICACIONES INTERACTIVAS ---
+        const INTERACTIVE_TOOLS = [
+            { cat: 'Interactiva', title: 'Capas de la Tierra', desc: 'Juego interactivo sobre geología y capas terrestres.', img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600', tags: ['Juego', 'Ludificación', 'Biología', 'Geología'], link: 'https://juanmale14.github.io/capas-de-la-Tierra./' },
+            { cat: 'Interactiva', title: 'Práctica Tiempos Verbales', desc: 'Actividad gamificada para dominar la gramática española.', img: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600', tags: ['Juego', 'Ludificación', 'Gramática'], link: 'https://juanmale14.github.io/juego-tiempos-verbales./' },
+            { cat: 'Interactiva', title: 'Sistema Solar Interactivo', desc: 'Exploración lúdica de los planetas y el espacio.', img: 'https://images.unsplash.com/photo-1454789548928-9efd52dc4031?w=600', tags: ['Juego', 'Ludificación', 'Biología'], link: 'https://juanmale14.github.io/planetas-sistema-solar/' },
+            { cat: 'Interactiva', title: 'Subgéneros Literarios', desc: 'Clasificación interactiva de textos y literatura.', img: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600', tags: ['Literatura', 'Ludificación', 'Juego'], link: 'https://juanmale14.github.io/g-literarios/' },
+            { cat: 'Interactiva', title: 'Sistema Respiratorio', desc: 'Aprende el funcionamiento del cuerpo humano jugando.', img: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600', tags: ['Juego', 'Biología'], link: 'https://juanmale14.github.io/aplicaci-n-sistema-respiratorio./' },
+            { cat: 'Interactiva', title: 'Pasapalabra Animales', desc: 'El clásico rosco de vocabulario sobre el reino animal.', img: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=600', tags: ['Juego', 'Ludificación', 'Biología'], link: 'https://juanmale14.github.io/juego-pasapalabra-CANVA-./' },
+            { cat: 'Interactiva', title: 'Memory: Verbos Irregulares', desc: 'Mejora el inglés con este juego de memoria de verbos.', img: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600', tags: ['Juego', 'Ludificación', 'Inglés'], link: 'https://juanmale14.github.io/The-memory-para-verbos-en-ingl-s./' },
+            { cat: 'Interactiva', title: 'Sudoku Matemático', desc: 'Desafío de cálculo mental y lógica para el aula.', img: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600', tags: ['Matemáticas', 'Juego', 'Cálculo'], link: 'https://juanmale14.github.io/Sudoku2/' },
+            { cat: 'Interactiva', title: 'Comunidades de España', desc: 'Mapa político interactivo para geografía e historia.', img: 'https://images.unsplash.com/photo-1543783232-179f485239d3?w=600', tags: ['Juego', 'Ludificación', 'Historia', 'Geografía'], link: 'https://juanmale14.github.io/mapa-pol-tico-interactivo/' },
+            { cat: 'Interactiva', title: 'Tres en Raya', desc: 'Clásico juego de estrategia para descansos activos.', img: 'https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=600', tags: ['Juego', 'Ludificación'], link: 'https://juanmale14.github.io/tic_tac_toe/' }
+        ];
+
+        let allTools = [...CENTRO_TOOLS, ...AULA_TOOLS, ...INTERACTIVE_TOOLS];
+        let allTags = new Set();
+
+        function init() {
+            // Recolectar etiquetas únicas
+            allTools.forEach(t => t.tags.forEach(tag => allTags.add(tag)));
+            
+            renderTags();
+            renderCards(allTools);
+            
+            setTimeout(() => {
+                document.getElementById('loading').classList.add('hidden');
+                document.getElementById('content-wrapper').classList.remove('hidden');
+            }, 600);
+        }
+
+        function renderTags() {
+            const container = document.getElementById('tag-filter-container');
+            const sortedTags = Array.from(allTags).sort();
+            
+            sortedTags.forEach(tag => {
+                const btn = document.createElement('button');
+                btn.className = 'tag-pill px-6 py-2.5 rounded-full bg-white text-slate-600 font-bold text-sm border border-slate-100 shadow-sm hover:bg-slate-50 transition-all';
+                btn.innerText = tag;
+                btn.onclick = (e) => filterByTag(tag, e.target);
+                container.appendChild(btn);
+            });
+        }
+
+        function filterByTag(tag, element) {
+            document.querySelectorAll('.tag-pill').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+
+            const filtered = tag === 'all' ? allTools : allTools.filter(t => t.tags.includes(tag));
+            renderCards(filtered);
+        }
+
+        function renderCards(tools) {
+            const container = document.getElementById('grid-container');
+            container.innerHTML = '';
+            
+            tools.forEach((tool, index) => {
+                const card = document.createElement('div');
+                card.className = 'tool-card glass-card overflow-hidden flex flex-col h-full animate-fade';
+                card.style.animationDelay = `${index * 0.03}s`; // Staggered animation
+                
+                card.innerHTML = `
+                    <div class="relative h-48 overflow-hidden group">
+                        <img src="${tool.img}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="${tool.title}" onerror="this.src='https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                        <div class="absolute top-5 right-5 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full text-[10px] font-black text-indigo-600 uppercase tracking-widest shadow-lg">
+                            ${tool.cat}
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-slate-800 mb-3 leading-tight tracking-tight">${tool.title}</h4>
+                        <p class="text-slate-500 text-sm mb-6 line-clamp-2 leading-relaxed flex-grow font-medium">${tool.desc}</p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            ${tool.tags.map(tag => `<span class="text-[9px] font-extrabold bg-indigo-50 text-indigo-500 px-3 py-1 rounded-lg uppercase tracking-wider">#${tag}</span>`).join('')}
+                        </div>
+                        <a href="${tool.link}" target="_blank" class="flex items-center justify-center gap-2 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-2xl transition-all shadow-xl shadow-indigo-100 hover:shadow-indigo-200">
+                            Abrir Herramienta
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        window.onload = init;
+    </script>
+
+
+</body></html>
