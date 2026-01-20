@@ -183,45 +183,52 @@
     </footer>
 
     <script>
-        // --- BASE DE DATOS UNIFICADA ---
+        // --- BASE DE DATOS UNIFICADA (Imágenes Únicas y Diferenciadas) ---
         const DATABASE = [
-            // GESTIÓN DE AULA (Añadido al inicio en pasos previos)
-            { title: "Análisis del aprendizaje", url: "https://juanmale14.github.io/an-lisis-del-aprendizaje./", tags: ["Evaluación", "Centro", "Estadísticas", "Datos", "Cálculo"], cat: "Aula", cover: "https://images.unsplash.com/photo-1543286386-713df548e9cc?w=600" },
+            // GESTIÓN DE AULA
+            { title: "Análisis del aprendizaje", url: "https://juanmale14.github.io/an-lisis-del-aprendizaje./", tags: ["Evaluación", "Centro", "Estadísticas", "Datos", "Cálculo"], cat: "Aula", cover: "https://images.unsplash.com/photo-1460518451285-97b6aa326961?w=600" },
 
             // GESTIÓN DE CENTRO
             { title: "Gestión de Espacios Comunes", url: "https://juanmale14.github.io/gesti-n-espacios-comunes-centro./", tags: ["Centro", "Espacios"], cat: "Centro", cover: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600" },
-            { title: "Gestión de Carritos de Ordenadores", url: "https://juanmale14.github.io/gesti-n-de-carritos./", tags: ["Centro", "Horarios", "Reserva", "Carritos"], cat: "Centro", cover: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600" },
-            { title: "Generador de Horarios de Auxiliares", url: "https://juanmale14.github.io/mi-app-horarios-auxiliares./", tags: ["Centro", "Horarios", "Personal"], cat: "Centro", cover: "https://images.unsplash.com/photo-1506784919141-935049915272?w=600" },
-            { title: "Carné de Convivencia", url: "https://juanmale14.github.io/gesti-n-convivencia/", tags: ["Centro", "Convivencia"], cat: "Centro", cover: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600" },
-            { title: "FOTOCOPIATOR", url: "https://juanmale14.github.io/fotocopiador/", tags: ["Centro", "Impresiones"], cat: "Centro", cover: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600" },
-            { title: "Creadora de gráficas", url: "https://juanmale14.github.io/generadora-de-gr-ficas./", tags: ["Centro", "Evaluación", "Estadísticas", "Datos", "Matemáticas"], cat: "Centro", cover: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600" },
+            { title: "Gestión de Carritos de Ordenadores", url: "https://juanmale14.github.io/gesti-n-de-carritos./", tags: ["Centro", "Horarios", "Reserva", "Carritos"], cat: "Centro", cover: "https://images.unsplash.com/photo-1588702547919-26089e690ecc?w=600" },
+            // IMAGEN CAMBIADA: Agenda/Planificación minimalista
+            { title: "Generador de Horarios de Auxiliares", url: "https://juanmale14.github.io/mi-app-horarios-auxiliares./", tags: ["Centro", "Horarios", "Personal"], cat: "Centro", cover: "https://images.unsplash.com/photo-1506784926709-22f1ec754fbe?w=600" },
+            { title: "Carné de Convivencia", url: "https://juanmale14.github.io/gesti-n-convivencia/", tags: ["Centro", "Convivencia"], cat: "Centro", cover: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600" },
+            { title: "FOTOCOPIATOR", url: "https://juanmale14.github.io/fotocopiador/", tags: ["Centro", "Impresiones"], cat: "Centro", cover: "https://images.unsplash.com/photo-1618042164219-62c820f10723?w=600" },
+            { title: "Creadora de gráficas", url: "https://juanmale14.github.io/generadora-de-gr-ficas./", tags: ["Centro", "Evaluación", "Estadísticas", "Datos", "Matemáticas"], cat: "Centro", cover: "https://images.unsplash.com/photo-1543286386-26da38012692?w=600" },
 
-            // GESTIÓN DE AULA
+            // GESTIÓN DE AULA (Continuación)
             { title: "Creación de equipos en el aula", url: "https://juanmale14.github.io/creadora-equipos-aula./", tags: ["Gestión de aula", "Aula", "Equipo", "Cooperativo"], cat: "Aula", cover: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600" },
-            { title: "Generador de equipos base", url: "https://juanmale14.github.io/generador-equipos-base./", tags: ["Aula", "Cooperativo", "Gestión de aula", "Equipo"], cat: "Aula", cover: "https://images.unsplash.com/photo-1523240715632-d984bc310b1a?w=600" },
-            { title: "Rúbricas en clase", url: "https://juanmale14.github.io/gesti-n-de-r-bricas-en-clase./", tags: ["Evaluación", "Aula", "Gestión de aula"], cat: "Aula", cover: "https://images.unsplash.com/photo-1454165833767-02a698a48769?w=600" },
-            { title: "Participación en clase", url: "https://juanmale14.github.io/participaci-n-en-clase/", tags: ["Participación", "Convivencia", "Aula"], cat: "Aula", cover: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600" },
-            { title: "Ruleta para la selección de grupos", url: "https://juanmale14.github.io/ruleta-selecci-n-de-grupos./", tags: ["Gestión de aula", "Aula", "Equipo", "Cooperativo"], cat: "Aula", cover: "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600" },
+            { title: "Generador de equipos base", url: "https://juanmale14.github.io/generador-equipos-base./", tags: ["Aula", "Cooperativo", "Gestión de aula", "Equipo"], cat: "Aula", cover: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" },
+            { title: "Rúbricas en clase", url: "https://juanmale14.github.io/gesti-n-de-r-bricas-en-clase./", tags: ["Evaluación", "Aula", "Gestión de aula"], cat: "Aula", cover: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600" },
+            { title: "Participación en clase", url: "https://juanmale14.github.io/participaci-n-en-clase/", tags: ["Participación", "Convivencia", "Aula"], cat: "Aula", cover: "https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=600" },
+            { title: "Ruleta para la selección de grupos", url: "https://juanmale14.github.io/ruleta-selecci-n-de-grupos./", tags: ["Gestión de aula", "Aula", "Equipo", "Cooperativo"], cat: "Aula", cover: "https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=600" },
+            // IMAGEN CAMBIADA: Grupo unido/Colaboración
+            { title: "Recogida de Datos Sociométricos", url: "https://juanmale14.github.io/recogida-datos-an-lisis-sociom-trico./", tags: ["Gestión de aula", "Cooperativo", "Convivencia", "Equipo", "Aula", "Datos"], cat: "Aula", cover: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600" },
+            // IMAGEN CAMBIADA: Gráfico de redes/Conexiones
+            { title: "Analizadora Sociométrica", url: "https://juanmale14.github.io/an-lisis-sociom-trico-grupo./", tags: ["Cooperativo", "Convivencia", "Centro", "Equipo", "Datos", "Gestión de aula", "inclusión"], cat: "Aula", cover: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=600" },
 
             // APLICACIONES INTERACTIVAS
             { title: "Capas de la Tierra", url: "https://juanmale14.github.io/capas-de-la-Tierra./", tags: ["Juego", "Ludificación", "Biología", "Geología"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600" },
-            { title: "Práctica de Tiempos Verbales", url: "https://juanmale14.github.io/juego-tiempos-verbales./", tags: ["Juego", "Ludificación", "Gramática"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600" },
-            { title: "Planetas del Sistema Solar", url: "https://juanmale14.github.io/planetas-sistema-solar/", tags: ["Juego", "Ludificación", "Biología"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1454789548928-9efd52dc4031?w=600" },
-            { title: "Subgéneros Literarios", url: "https://juanmale14.github.io/g-literarios/", tags: ["Literatura", "Ludificación", "Juego"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600" },
-            { title: "Aplicación sobre el Sistema Respiratorio", url: "https://juanmale14.github.io/aplicaci-n-sistema-respiratorio./", tags: ["Juego", "Biología"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600" },
-            { title: "Juego de Pasapalabra sobre animales", url: "https://juanmale14.github.io/juego-pasapalabra-CANVA-./", tags: ["Juego", "Ludificación", "Biología"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=600" },
-            { title: "Memory de Verbos Irregulares", url: "https://juanmale14.github.io/The-memory-para-verbos-en-ingl-s./", tags: ["Juego", "Ludificación", "Inglés"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600" },
-            { title: "Sudoku Matemático", url: "https://juanmale14.github.io/Sudoku2/", tags: ["Matemáticas", "Juego", "Cálculo"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600" },
-            { title: "Mapa Político de España", url: "https://juanmale14.github.io/mapa-pol-tico-interactivo/", tags: ["Juego", "Ludificación", "Historia", "Geografía"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1543783232-179f485239d3?w=600" },
-            { title: "Quién Quiere Ser Millonario", url: "https://juanmale14.github.io/juego-qui-n-quiere-ser-millonario%2F", tags: ["Ludificación", "Juego", "Comunicación"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600" },
-            { title: "Tipos de Seres Vivos", url: "https://juanmale14.github.io/esquema_interactivo/", tags: ["Juego", "Ludificación", "Biología"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1511044568932-338cba0ad803?w=600" },
-            { title: "Categorías Gramaticales", url: "https://juanmale14.github.io/juego-categor-as-gramaticales/", tags: ["Juego", "Ludificación", "Gramática"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1519337265831-281ec6cc8514?w=600" },
+            { title: "Práctica de Tiempos Verbales", url: "https://juanmale14.github.io/juego-tiempos-verbales./", tags: ["Juego", "Ludificación", "Gramática"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1501139083538-0139583c060f?w=600" },
+            // IMAGEN CAMBIADA: Vía Láctea/Estrellas
+            { title: "Planetas del Sistema Solar", url: "https://juanmale14.github.io/planetas-sistema-solar/", tags: ["Juego", "Ludificación", "Biología"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=600" },
+            // IMAGEN CAMBIADA: Pila de libros aesthetic
+            { title: "Subgéneros Literarios", url: "https://juanmale14.github.io/g-literarios/", tags: ["Literatura", "Ludificación", "Juego"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=600" },
+            { title: "Aplicación sobre el Sistema Respiratorio", url: "https://juanmale14.github.io/aplicaci-n-sistema-respiratorio./", tags: ["Juego", "Biología"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=600" },
+            // IMAGEN CAMBIADA: Gato curioso (temática animal)
+            { title: "Juego de Pasapalabra sobre animales", url: "https://juanmale14.github.io/juego-pasapalabra-CANVA-./", tags: ["Juego", "Ludificación", "Biología"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=600" },
+            { title: "Memory de Verbos Irregulares", url: "https://juanmale14.github.io/The-memory-para-verbos-en-ingl-s./", tags: ["Juego", "Ludificación", "Inglés"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1534333555562-b98a3c944747?w=600" },
+            { title: "Sudoku Matemático", url: "https://juanmale14.github.io/Sudoku2/", tags: ["Matemáticas", "Juego", "Cálculo"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1580541832626-2a7131ee809f?w=600" },
+            { title: "Mapa Político de España", url: "https://juanmale14.github.io/mapa-pol-tico-interactivo/", tags: ["Juego", "Ludificación", "Historia", "Geografía"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600" },
+            // IMAGEN CAMBIADA: Monedas de oro/Tesoro
+            { title: "Quién Quiere Ser Millonario", url: "https://juanmale14.github.io/juego-qui-n-quiere-ser-millonario%2F", tags: ["Ludificación", "Juego", "Comunicación"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1563206767-5b1d97299337?w=600" },
+            { title: "Tipos de Seres Vivos", url: "https://juanmale14.github.io/esquema_interactivo/", tags: ["Juego", "Ludificación", "Biología"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600" },
+            { title: "Categorías Gramaticales", url: "https://juanmale14.github.io/juego-categor-as-gramaticales/", tags: ["Juego", "Ludificación", "Gramática"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600" },
             { title: "Tres en Raya", url: "https://juanmale14.github.io/tic_tac_toe/", tags: ["Juego", "Ludificación"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=600" },
-            
-            // NUEVAS HERRAMIENTAS AÑADIDAS AL FINAL
             { title: "Misión Pingüino multiplicador", url: "https://juanmale14.github.io/ping-ino-multiplicador./", tags: ["Ludificación", "Juego", "Matemáticas"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1596495578065-6e0763fa1178?w=600" },
-            { title: "Explorador de palabras: categorías gramaticales", url: "https://juanmale14.github.io/categor-as-gramaticales./", tags: ["Juego", "Ludificación", "Gramática"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1555412654-72a95a495858?w=600" },
-            { title: "Análisis de Comprensión Lectora", url: "https://juanmale14.github.io/Estad-sticas-tratamiento-lectura./", tags: ["Datos", "Evaluación", "Estadísticas", "Lectura"], cat: "Centro", cover: "https://images.unsplash.com/photo-1599658880436-c61792e70672?w=600" }
+            { title: "Explorador de palabras: categorías gramaticales", url: "https://juanmale14.github.io/categor-as-gramaticales./", tags: ["Juego", "Ludificación", "Gramática"], cat: "Interactiva", cover: "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=600" },
+            { title: "Análisis de Comprensión Lectora", url: "https://juanmale14.github.io/Estad-sticas-tratamiento-lectura./", tags: ["Datos", "Evaluación", "Estadísticas", "Lectura"], cat: "Centro", cover: "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=600" }
         ];
 
         let menuOpen = false;
